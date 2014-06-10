@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+
+
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Paul Coffey Contractor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/carousel.css" rel="stylesheet">
+
+     <title>User engagement</title>
+
+     
+     
+     <script src="jquery.js"></script>
+     
+</head>
+
+<body>
+    <div style="width: 200px">
+    <p class="cap1" style="display:none;">I am having water!!!
+    Good friends, good books and a sleepy conscience: this is the ideal life.</p>
+    <p class="cap2" style="display:none;">Caption 2!!!!!!!!!!!!!!!!!!!</p>
+    
+    </div>
+    <img src="assets/img/toast.jpg"/>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $("img").click(function() {
+
+            var clicks = $(this).data('clicks');
+              if (clicks) {
+                 // odd clicks
+                  $("img").attr("src","assets/img/second.jpg");
+
+                  $("p.cap1").css({
+                    "display":"none"
+                  })
+
+                  $("p.cap2").delay(4000).show("slow").css({
+                    "position": "absolute",
+                    "top": "50%%",
+                    "left": "2%",
+                    "background": "rgba(192,192,192, 0.6)",
+                    "padding": "10px"
+                    
+                    });
+
+                    $("p").css({
+                        "width":"100px"
+                    });
+              } else {
+                 // even clicks
+                 
+                 $("p.cap1").show("slow").css({
+                    "position": "absolute",
+                    "top": "50%%",
+                    "left": "2%",
+                    "background": "rgba(192,192,192, 0.6)",
+                    "padding": "10px"
+                    
+                    });
+
+                    $("p").css({
+                        "width":"100px"
+                    });
+              }
+              $(this).data("clicks", !clicks);
+           
+        });
+     </script>
+</body>
+
+</html>
